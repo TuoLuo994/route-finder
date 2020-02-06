@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Country route search</title>
+</head>
+
+<body>
+    <div id="askName">
+        <h1>Hei! Anna nimesi:</h1>
+        <form name="myForm">
+            <input type="text" name="fName" id="fName">
+            <button id="chooseName" type="submit">Seuraava</button>
+        </form>
+    </div>
+    <div class="row hidden" id="row">
+        <nav class="col-sm-3">
+            <div class="shadow p-3 mb-5 bg-light rounded" id="plan" style="max-width: 16rem;">
+                <h4 id=suunnitelmaOtsikko class="card-title">Matkasuunnitelma</h2>
+                <div class="card-text" id="visitedCountries" style="max-width: 14rem;"></div>
+                <button id="save" type="button">Tallenna reitti</button>
+            </div>
+        </nav>
+
+        <div class="col-sm-9" id="bigBlock">
+            <div class="card bg-light mb-3">
+                <h1 id="largeHeader">JWT HT</h1>
+                <div class="card-body" id="countryBase">
+                    <h2 class="card-title">Valitse aloitusmaa (taso 1)</h2>
+                    <div class="row" id="level-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Matkasuunnitelmasi:</h2>
+            <div id="finalPlan"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/underscore-min.js"></script>
+</body>
+
+</html>
